@@ -1,14 +1,44 @@
-.banner-image {
+/* BANNER UTUH DENGAN BACKGROUND GRADIENT */
+.banner-wrapper {
+  position: relative;
   width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  padding: 4px;
-  background: linear-gradient(135deg, #f0a1ff, #a1d4ff);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease-in-out;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 20px;
+
+  /* Gradasi warna latar belakang */
+  background: linear-gradient(135deg, #6ebde4, #6bc4f7); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.banner-image:hover {
-  transform: scale(1.03);
+.banner-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* agar tidak crop */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Efek hover (opsional) */
+.banner-wrapper:hover .banner-image {
+  transform: scale(1.02);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .banner-wrapper {
+    height: 200px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-wrapper {
+    height: 160px;
+    border-radius: 10px;
+  }
 }

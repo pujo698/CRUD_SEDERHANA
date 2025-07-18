@@ -1,11 +1,12 @@
 <?= $this->extend('layout/template') ?>
 <?= $this->section('content') ?>
 
-
-<div class="banner">
-  <img src="<?= base_url('images/imphen.jpg') ?>" class="banner-image" alt="Banner">
+<!-- BANNER TANPA TEKS -->
+<div class="banner-wrapper">
+  <img src="<?= base_url('images/imphen.jpg') ?>" alt="Banner" class="banner-image">
 </div>
 
+<!-- KONTEN DASHBOARD -->
 <div class="container mt-4">
   <div class="row text-center mb-4">
     <div class="col-md-4">
